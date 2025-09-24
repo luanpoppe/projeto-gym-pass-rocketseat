@@ -55,6 +55,6 @@ describe("Register Use Case", () => {
       password: "123456",
     });
 
-    expect(result).rejects.toBeInstanceOf(UserAlreadyExistsError);
+    await expect(result).rejects.toBeInstanceOf(UserAlreadyExistsError);
   });
 });
