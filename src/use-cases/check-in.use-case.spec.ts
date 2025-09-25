@@ -82,4 +82,24 @@ describe("Check-in Use Case", () => {
 
     await expect(resultado).resolves.toBeTruthy();
   });
+
+  it("should not be able to check in on distant gym", async () => {
+    gymsRepository.items.push({
+      id: "gym-02",
+      title: "Academia",
+      description: "descrição",
+      latitude: new Decimal(12.9947102),
+      longitude: new Decimal(-38.4395407),
+      phone: "",
+    });
+
+    const result = checkInUseCase.execute({
+      gymId: "gym-02",
+      userId: "user-01",
+      userLatitude: -13.001359,
+      userLongitude: -38.4506987,
+    });
+
+    await expect(result).rejects.toBeInstanceOf(Error);
+  });
 });
