@@ -1,6 +1,4 @@
 import { beforeEach, describe, expect, it } from "vitest";
-import { InMemoryCheckInsRepository } from "@/repositories/in-memory/in-memory-check-ins-repository";
-import { FetchUserCheckInsHistoryUseCase } from "./fetch-user-check-ins-history.use-case";
 import { InMemoryGymsRepository } from "@/repositories/in-memory/in-memory-gyms-repository";
 import { SearchGymsUseCase } from "./search-gyms.use-case";
 
