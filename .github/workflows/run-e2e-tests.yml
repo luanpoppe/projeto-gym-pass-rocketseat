@@ -12,10 +12,10 @@ jobs:
         image: postgres
         ports:
           - 5432:5432
-        environment:
-          - POSTGRES_USER=docker
-          - POSTGRES_PASSWORD=docker
-          - POSTGRES_DB=apisolid
+        env:
+          POSTGRES_USER: docker
+          POSTGRES_PASSWORD: docker
+          POSTGRES_DB: apisolid
 
     steps:
       - uses: actions/checkout@v3
