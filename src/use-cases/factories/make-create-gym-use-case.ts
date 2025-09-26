@@ -1,5 +1,4 @@
 import { CreateGymUseCase } from "../create-gym.user-case";
-import { FetchNearbyGymsUseCase } from "../fetch-nearby-gyms.use-case";
 import { PrismaGymsRepository } from "@/repositories/prisma/prisma-gyms-repository";
 
 export function makeCreateGymUseCase() {
