@@ -1,4 +1,3 @@
-import { CheckIn } from "generated/prisma";
 import { CheckInsRepository } from "@/repositories/check-ins-repository";
 
 interface GetUserMetricsUseCaseRequest {
